@@ -1,1 +1,1 @@
-The _unmanaged folder holds vendor libs that are not managed by Composer
+This folder holds vendor libs that are not managed by Composer
