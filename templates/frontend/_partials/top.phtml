@@ -1,0 +1,34 @@
+<?php
+    $findParam = $defaults->getItem('findParam', 'find');
+    $route = $request->attributes->get('_route');
+    $classScribbles = ($route == 'frontendScribbleIndex' || $route == 'frontendScribbleDetail' || $route == 'frontendScribbleTag') ? 'on' : 'off';
+    $classTags = ($route == 'frontendTagIndex') ? 'on' : 'off';
+?>
+
+<header class="scribbled-site-header">
+    <a href="<?php echo $urler->generate('frontendScribbleIndex'); ?>">
+        <img src="<?php echo $env->getMediaPath(); ?>/images/scribbled.png" width="140" alt="Scribbled" />
+    </a>
+</header>
+
+<div class="site-nav">
+    <div class="scribbled-site-nav">
+        <ul>
+            <li class="first <?php echo $classScribbles; ?>">
+                <a href="<?php echo $urler->generate('frontendScribbleIndex'); ?>">Scribbles</a>
+            </li>
+            
+            <li class="last <?php echo $classTags; ?>">
+                <a href="<?php echo $urler->generate('frontendTagIndex'); ?>">Tags</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="scribbled-site-search">
+        <form method="get" action="<?php echo $urler->generate('frontendScribbleIndex'); ?>">
+            <fieldset>
+                <input type="text" name="<?php echo $findParam; ?>" value="<?php echo strip_tags($request->query->get($findParam)); ?>" />
+            </fieldset>
+        </form>
+    </div>
+</div>

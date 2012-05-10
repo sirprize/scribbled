@@ -1,0 +1,2 @@
+url: https://github.com/netcarver/textile
+commit: 646b3d67c4d8938bf7cce806a8132b772c2f1e74

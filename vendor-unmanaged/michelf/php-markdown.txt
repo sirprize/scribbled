@@ -1,0 +1,2 @@
+url: http://git.michelf.com/php-markdown
+commit: c89732d5cc2c5af1ac4394c255e77b0be87fb395

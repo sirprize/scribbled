@@ -1,0 +1,19 @@
+<form method="get" action="<?php echo $paginator->getBaseUrl(); ?>">
+    <fieldset>
+        <?php foreach($paginator->getParams() as $k => $v): ?>
+            <input type="hidden" name="<?php echo $k; ?>" value="<?php echo $v; ?>" />
+        <?php endforeach; ?>
+
+        <?php if($paginator->getCurrentPage() > 1): ?>
+            <a href="<?php echo $paginator->getPreviousPageUrl(); ?>" class="previous-page" rel="prev">{{</a>
+        <?php endif; ?>
+
+        <span>Page</span>
+        <input type="text" name="<?php echo $paginator->getPageParam(); ?>" value="<?php echo $paginator->getCurrentPage(); ?>" />
+        <span>of <?php echo $paginator->getNumPages(); ?></span>
+
+        <?php if($paginator->getCurrentPage() < $paginator->getNumPages()): ?>
+             <a href="<?php echo $paginator->getNextPageUrl(); ?>" class="next-page" rel="next">}}</a>
+        <?php endif; ?>
+    </fieldset>
+</form>

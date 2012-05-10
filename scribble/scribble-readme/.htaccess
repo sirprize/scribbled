@@ -1,0 +1,7 @@
+<Files demo.phtml>
+    Deny from all
+</Files>
+
+<Files scribble.*>
+    Deny from all
+</Files>

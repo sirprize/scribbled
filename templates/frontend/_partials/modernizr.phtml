@@ -1,0 +1,8 @@
+<script src="<?php echo $vendorMediaPath; ?>/modernizr/modernizr/modernizr.js"></script>
+
+<script>
+    Modernizr.load({
+        test: window.matchMedia || window.msMatchMedia,
+        nope: '<?php echo $vendorMediaPath; ?>/scottjehl/respond/respond.min.js'
+    });
+</script>
