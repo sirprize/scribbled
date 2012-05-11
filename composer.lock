@@ -1,5 +1,5 @@
 {
-    "hash": "ac03e259bbad0ee7ecdfe58610fcbf92",
+    "hash": "3e531f9c3c0bf08ab43afc404a0e2e51",
     "packages": [
         {
             "package": "doctrine/common",
@@ -20,15 +20,18 @@
         },
         {
             "package": "sirprize/paginate",
-            "version": "v0.1.0"
+            "version": "dev-master",
+            "source-reference": "105b3296fb3538cf3a3ace4929539f3ef9248518"
         },
         {
             "package": "sirprize/scribble",
-            "version": "v0.1.0"
+            "version": "dev-master",
+            "source-reference": "e6b1bb4b525888324844f9630ba0e0a65a3ac13d"
         },
         {
             "package": "sirprize/scrubble",
-            "version": "v0.1.0"
+            "version": "dev-master",
+            "source-reference": "5942063d6a874b8ceb6caaa5f1bd59f497e4d390"
         },
         {
             "package": "symfony/event-dispatcher",

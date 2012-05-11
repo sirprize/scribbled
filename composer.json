@@ -25,8 +25,8 @@
         "symfony/http-kernel": "2.1.*",
         "symfony/routing": "2.1.*",
         "symfony/templating": "2.1.*",
-        "sirprize/scribble": "0.1.*",
-        "sirprize/scrubble": "0.1.*",
-        "sirprize/paginate": "0.1.*"
+        "sirprize/scribble": "dev-master",
+        "sirprize/scrubble": "dev-master",
+        "sirprize/paginate": "dev-master"
     }
 }
