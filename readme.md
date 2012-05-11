@@ -1,16 +1,19 @@
 # Scribbled
 
-Blog aware note-taking app for scribblers and coders.
+Blog aware notes app for scribblers and coders.
 
 ![Scribbled](https://github.com/sirprize/scribbled/raw/master/media/images/scribbled.png)
 
 ## Features
 
-+ Your content in text files under version control
++ All-in-one notes and blogging application
++ Your notes in text files under version control
 + Adapters for [Markdown](http://daringfireball.net/projects/markdown/syntax), [Textile](http://textile.thresholdstate.com/), plain text and HTML
-+ Ideal for code blogging
++ Ideal for code blogging - embed code snippets from external files in your notes
 + Responsive and fluid layout based on [HTML5 Boilerplate](http://html5boilerplate.com/)
 + Third party integrations: Opengraph, Google Analytics etc
+
+Scribbled is a concrete implementation of [Scrubble](https://github.com/sirprize/scrubble) and merely provides configuration, bootstrapping, templates and stylesheets. Use it as the starting point for your own app and start scribblin'
 
 ## Get Scribbled
 

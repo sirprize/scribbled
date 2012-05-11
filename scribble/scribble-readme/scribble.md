@@ -6,15 +6,26 @@
 <!-- scribble-publish: 1 -->
 <!-- scribble-ignore-snippets: 1 -->
 
-Text file storage service.
+Text file browsing and converter service.
 
 ## Features
 
-+ Content storage in text files (currently ships with output filters for [Markdown](http://daringfireball.net/projects/markdown/syntax), [Textile](http://textile.thresholdstate.com/), plain text and HTML)
++ Browse text files and normalize multiple input formats (currently ships with filters for [Markdown](http://daringfireball.net/projects/markdown/syntax), [Textile](http://textile.thresholdstate.com/), plain text and HTML)
 + Embed snippets from external files
 + Plugin-architecture for custom input and output filters
-+ Meaningful listings and search
-+ Normalize multiple input formats
++ Handle collections of files (filter, search and sort)
+
+## Installation
+
++ `git clone git://github.com/sirprize/scribble.git scribble`
++ `cd scribble`
++ `php composer.phar install`
++ `cd tests`
++ `phpunit` (verify installation)
+
+## Getting Started
+
+Get [Scribbled](https://github.com/sirprize/scribbled) for a full implementation of Scribble.
 
 ## Basic Usage
 
@@ -270,6 +281,8 @@ Configuration
     
     $directory = new ScribbleDirWithFiles($config);
 
+Here we map input and output filters to the file suffix.
+
 ### Filter Config For Markdown
 
     $markdownFiltersConfig = array(
@@ -374,8 +387,6 @@ List all tags from all scribbles
 + PHP 5.3+
 
 ## Dependencies
-
-These fine libraries ship with Scribble:
 
 + [Doctrine2 Common](https://github.com/doctrine/common)
 + [Php Markdown](https://github.com/michelf/php-markdown/)

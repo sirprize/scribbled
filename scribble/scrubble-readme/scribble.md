@@ -5,7 +5,7 @@
 <!-- scribble-modified: 20120508 -->
 <!-- scribble-publish: 1 -->
 
-Powering blog-aware note-taking apps implementing the [Scribble](https://github.com/sirprize/scribble) text file storage service.
+Powering blog-aware note apps implementing the [Scribble](https://github.com/sirprize/scribble) text file browsing and converter service.
 
 ## Features
 
@@ -14,6 +14,10 @@ Powering blog-aware note-taking apps implementing the [Scribble](https://github.
 + Register custom event listeners to hook into every aspect of the [application lifecycle](https://github.com/symfony/EventDispatcher)
 + [Templating](https://github.com/symfony/Templating) with inheritance and partials
 + Perfect urls and [Request routing](https://github.com/symfony/Routing)
+
+## Getting Started
+
+Get [Scribbled](https://github.com/sirprize/scribbled) for a full implementation of Scrubble.
 
 ## Routing
 
@@ -37,14 +41,14 @@ Scrubble expects the following configuration
             'errorReporting' => <val>
         ),
         'env' => array(
-            'debug' => 0|1,
-            'baseDir' => /your/web/root,
-            'libDir' => /lib/dir,
-            'templateDir' => /template/dir,
-            'vendorIncludeDir' => /vendor/dir,
-            'basePath' => /,
-            'mediaPath' => /url/path/to/media/dir,
-            'vendorMediaPath' => /url/path/to/vendor/dir
+            'debug' => 0,
+            'baseDir' => dirname(__DIR__),
+            'libDir' => dirname(__DIR__).'/lib',
+            'templateDir' => dirname(__DIR__).'/templates',
+            'vendorIncludeDir' => dirname(__DIR__).'/vendor',
+            'basePath' => dirname($_SERVER["SCRIPT_NAME"]),
+            'mediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/media',
+            'vendorMediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/media/vendor'
         ),
         'scribble.directory' => array(
             // config for Sirprize\Scribble\ScribbleDirWithSubdirs
@@ -55,16 +59,9 @@ Scrubble expects the following configuration
             'itemsPerPage' => <val>
         ),
         'requires => array(
-            'path/to/Doctrine/Common/ClassLoader.php',
-            'path/to/pimple/lib/Pimple.php',
-            'path/to/php-markdown/markdown.php' // https://github.com/michelf/php-markdown
-        ),
-        'namespaces' => array(
-            'Sirprize\\Scribble' => 'path/to/scribble/lib',
-            'Sirprize\\Scrubble' => 'path/to/scrubble/lib',
-            'Sirprize\\Paginate' => 'path/to/paginate/lib',
-            'Doctrine\\Common' => 'path/to/doctrine-common/lib',
-            'Symfony' => 'path/to/scrubble/symfony/lib'
+            dirname(__DIR__).'/vendor/autoload.php',
+            dirname(__DIR__).'/vendor-unmanaged/michelf/php-markdown/markdown.php',
+            dirname(__DIR__).'/vendor-unmanaged/netcarver/textile/classTextile.php'
         )
     );
 
@@ -148,8 +145,6 @@ That's it, the new service is available throughout the framework.
 + PHP 5.3+
 
 ## Dependencies
-
-These fine libraries ship with Scrubble:
 
 + [Pimple](https://github.com/fabpot/Pimple)
 + [Symfony EventDispatcher](https://github.com/symfony/EventDispatcher)

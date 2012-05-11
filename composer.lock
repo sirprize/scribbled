@@ -26,12 +26,12 @@
         {
             "package": "sirprize/scribble",
             "version": "dev-master",
-            "source-reference": "e6b1bb4b525888324844f9630ba0e0a65a3ac13d"
+            "source-reference": "aafcbe4f8e9f0077fee4464f2c04bc7f5659399f"
         },
         {
             "package": "sirprize/scrubble",
             "version": "dev-master",
-            "source-reference": "5942063d6a874b8ceb6caaa5f1bd59f497e4d390"
+            "source-reference": "19ff039cfe575cf2120a84c3e177f72b7e204f7c"
         },
         {
             "package": "symfony/event-dispatcher",
