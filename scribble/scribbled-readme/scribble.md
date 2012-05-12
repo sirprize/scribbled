@@ -1,13 +1,13 @@
 <!-- scribble-title: Scribbled Readme -->
-<!-- scribble-lede: Blog aware notes app for scribblers and coders -->
+<!-- scribble-lede: Noteblog for scribblers and coders -->
 <!-- scribble-tags: css html theme responsive mobile -->
 <!-- scribble-created: 20120509 -->
 <!-- scribble-modified: 20120509 -->
 <!-- scribble-publish: 1 -->
 
-Blog aware notes app for scribblers and coders.
+Noteblog for scribblers and coders.
 
-![Scribbled](https://github.com/sirprize/scribbled/raw/master/media/images/scribbled.png)
+![Scribbled](https://github.com/sirprize/themed/raw/master/media/images/scribbled.png)
 
 ## Features
 
@@ -18,7 +18,7 @@ Blog aware notes app for scribblers and coders.
 + Responsive and fluid layout based on [HTML5 Boilerplate](http://html5boilerplate.com/)
 + Third party integrations: Opengraph, Google Analytics etc
 
-Scribbled is a concrete implementation of [Scrubble](https://github.com/sirprize/scrubble) and merely provides configuration, bootstrapping, templates and stylesheets. Use it as the starting point for your own app and start scribblin'
+Scribbled is a concrete implementation of [Scrubble](https://github.com/sirprize/scrubble) and merely provides configuration and bootstrapping. Use it as the starting point for your own app and start scribblin'
 
 ## Get Scribbled
 
@@ -49,6 +49,7 @@ These fine libraries ship with Scribbled:
 + [Scrubble](https://github.com/sirprize/scrubble)
 + [Scribble](https://github.com/sirprize/scribble)
 + [Paginate](https://github.com/sirprize/paginate)
++ [Themed](https://github.com/sirprize/themed)
 
 ## License
 

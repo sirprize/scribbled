@@ -5,7 +5,7 @@
 <!-- scribble-modified: 20120508 -->
 <!-- scribble-publish: 1 -->
 
-Powering blog-aware note apps implementing the [Scribble](https://github.com/sirprize/scribble) text file browsing and converter service.
+Powering noteblog apps implementing the [Scribble](https://github.com/sirprize/scribble) text file browsing and converter service.
 
 ## Features
 
