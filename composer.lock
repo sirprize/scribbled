@@ -36,7 +36,7 @@
         {
             "package": "sirprize/themed",
             "version": "dev-master",
-            "source-reference": "44603a4c3442b5c6134980310f988e4ed8f39ccb"
+            "source-reference": "90c27e848a2285c16c3c07cb354a986912491d9b"
         },
         {
             "package": "symfony/event-dispatcher",
