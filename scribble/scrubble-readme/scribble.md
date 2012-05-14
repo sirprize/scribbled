@@ -88,7 +88,7 @@ Grab the default route collection from the service container and add a route to 
 
     $routes->add('about', new Route(
         '/about/',
-        array('action' => 'MyScribbleApp\Controller\Frontend\AboutAction::indexAction', 'template' => 'about.phtml')
+        array('_controller' => 'MyScribbleApp\Controller\Frontend\AboutController::indexAction', 'template' => 'about.phtml')
     ));
 
 Removing any of the default routes is just as easy:
