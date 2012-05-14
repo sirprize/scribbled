@@ -1,5 +1,7 @@
 <?php
 
+$basePath = (dirname($_SERVER["SCRIPT_NAME"]) == '/') ? '' : '/';
+
 // config (production)
 $production = array(
     'php' => array(
@@ -10,8 +12,8 @@ $production = array(
     'theme' => array(
         'debug' => 0,
         'templateDir' => dirname(__DIR__).'/vendor/sirprize/themed/templates',
-        'mediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/vendor/sirprize/themed/media',
-        'headerGraphic' => dirname($_SERVER["SCRIPT_NAME"]).'/vendor/sirprize/themed/media/images/header.png',
+        'mediaPath' => $basePath.'/vendor/sirprize/themed/media',
+        'headerGraphic' => $basePath.'/vendor/sirprize/themed/media/images/header.png',
         'dateFormat' => 'F d, Y',
         'scribbleImage' => '',
         'siteTitle' => "Scribbled - The Noteblog For Scribblers",
@@ -21,7 +23,7 @@ $production = array(
     ),
     'scribble.directory' => array(
         'dir' => dirname(__DIR__).'/scribble',
-        'path' => dirname($_SERVER["SCRIPT_NAME"]).'/scribble',
+        'path' => $basePath.'/scribble',
         'files' => array(
             'scribble.md' => array(
                 'inputFilters' => array(
