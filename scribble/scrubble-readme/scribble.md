@@ -40,15 +40,10 @@ Scrubble expects the following configuration
             'displayStartupErrors' => <val>,
             'errorReporting' => <val>
         ),
-        'env' => array(
+        'theme' => array(
             'debug' => 0,
-            'baseDir' => dirname(__DIR__),
-            'libDir' => dirname(__DIR__).'/lib',
             'templateDir' => dirname(__DIR__).'/templates',
-            'vendorIncludeDir' => dirname(__DIR__).'/vendor',
-            'basePath' => dirname($_SERVER["SCRIPT_NAME"]),
-            'mediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/media',
-            'vendorMediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/media/vendor'
+            'mediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/media'
         ),
         'scribble.directory' => array(
             // config for Sirprize\Scribble\ScribbleDirWithSubdirs
@@ -84,7 +79,7 @@ Scrubble will look for the following templates by default:
 
 ## Adding Routes
 
-Grab the default route collection from the service container and add a route to it. The template name is passed to the controller by means of the `template` key. Scrubble will look for this template in `Bootstrap::getServices('env')->getTemplateDir()`. It's up to you whether you want to pass in this value from the routing configuration or do it in some other way from within your controller.
+Grab the default route collection from the service container and add a route to it. The template name is passed to the controller by means of the `template` key. Scrubble will look for this template in `Bootstrap::getServices('theme')->getTemplateDir()`. It's up to you whether you want to pass in this value from the routing configuration or do it in some other way from within your controller.
 
     use Sirprize\Scrubble\Bootstrap;
 
@@ -154,7 +149,3 @@ That's it, the new service is available throughout the framework.
 + [Symfony Templating](https://github.com/symfony/Templating)
 + [Scribble](https://github.com/sirprize/scribble)
 + [Paginate](https://github.com/sirprize/paginate)
-
-## License
-
-See LICENSE.

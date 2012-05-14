@@ -31,12 +31,12 @@
         {
             "package": "sirprize/scrubble",
             "version": "dev-master",
-            "source-reference": "e63fea4f891ec6360e84f2ebb31e43bf0a77ee40"
+            "source-reference": "v0.2.0"
         },
         {
             "package": "sirprize/themed",
             "version": "dev-master",
-            "source-reference": "90c27e848a2285c16c3c07cb354a986912491d9b"
+            "source-reference": "v0.2.0"
         },
         {
             "package": "symfony/event-dispatcher",

@@ -1,5 +1,5 @@
 <!-- scribble-title: Proportions, Not Pixels -->
-<!-- scribble-lede: Embrace the flexibility inherent to the web in your design -->
+<!-- scribble-lede: An example of a scribble with a demo -->
 <!-- scribble-tags: css responsive design -->
 <!-- scribble-image: media/css.png -->
 <!-- scribble-created: 20110801 -->

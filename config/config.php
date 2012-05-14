@@ -7,15 +7,17 @@ $production = array(
         'displayStartupErrors' => 0,
         'errorReporting' => E_ALL & ~E_NOTICE,
     ),
-    'env' => array(
+    'theme' => array(
         'debug' => 0,
-        'baseDir' => dirname(__DIR__),
-        'libDir' => dirname(__DIR__).'/lib',
         'templateDir' => dirname(__DIR__).'/vendor/sirprize/themed/templates',
-        'vendorIncludeDir' => dirname(__DIR__).'/vendor',
-        'basePath' => dirname($_SERVER["SCRIPT_NAME"]),
         'mediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/vendor/sirprize/themed/media',
-        'vendorMediaPath' => dirname($_SERVER["SCRIPT_NAME"]).'/vendor/sirprize/themed/media'
+        'headerGraphic' => dirname($_SERVER["SCRIPT_NAME"]).'/vendor/sirprize/themed/media/images/header.png',
+        'dateFormat' => 'F d, Y',
+        'scribbleImage' => '',
+        'siteTitle' => "Scribbled - The Noteblog For Scribblers",
+        'siteDescription' => "",
+        'siteFeedUrl' => '',
+        'enableTwitterAndPlusOne' => true
     ),
     'scribble.directory' => array(
         'dir' => dirname(__DIR__).'/scribble',
@@ -65,14 +67,6 @@ $production = array(
         dirname(__DIR__).'/vendor-unmanaged/netcarver/textile/classTextile.php'
     ),
     'namespaces' => array(),
-    'defaults' => array(
-        'dateFormat' => 'F d, Y',
-        'scribbleImage' => '',
-        'siteTitle' => "Scribbled - The noteblog For Scribblers And Coders",
-        'siteDescription' => "",
-        'siteFeedUrl' => '',
-        'enableSocialPlugins' => true
-    ),
     'google' => array(
         'analyticsId' => '',
     ),
@@ -89,15 +83,13 @@ $development = array(
         'displayStartupErrors' => 1,
         'errorReporting' => -1, // show every possible error
     ),
-    'env' => array(
-        'debug' => 1
+    'theme' => array(
+        'debug' => 1,
+        'enableTwitterAndPlusOne' => false
     ),
     'scribble.repository' => array(
         'mode' => 'all', // show published and unpublished scribbles
         'itemsPerPage' => 20
-    ),
-    'defaults' => array(
-        'enableSocialPlugins' => false
     )
 );
 

@@ -1,6 +1,6 @@
 # Scribbled
 
-Noteblog for scribblers and coders.
+The noteblog for scribblers.
 
 ![Scribbled](https://github.com/sirprize/themed/raw/master/media/images/scribbled.png)
 
@@ -45,6 +45,10 @@ These fine libraries ship with Scribbled:
 + [Scribble](https://github.com/sirprize/scribble)
 + [Paginate](https://github.com/sirprize/paginate)
 + [Themed](https://github.com/sirprize/themed)
+
+## Todo
+
++ Scribble cache
 
 ## License
 

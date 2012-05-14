@@ -391,7 +391,3 @@ List all tags from all scribbles
 + [Doctrine2 Common](https://github.com/doctrine/common)
 + [Php Markdown](https://github.com/michelf/php-markdown/)
 + [Textile](https://github.com/netcarver/textile)
-
-## License
-
-See LICENSE.
