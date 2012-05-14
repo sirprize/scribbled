@@ -1,6 +1,6 @@
 <?php
 
-$basePath = (dirname($_SERVER["SCRIPT_NAME"]) == '/') ? '' : '/';
+$basePath = (dirname($_SERVER["SCRIPT_NAME"]) == '/') ? '' : dirname($_SERVER["SCRIPT_NAME"]);
 
 // config (production)
 $production = array(
