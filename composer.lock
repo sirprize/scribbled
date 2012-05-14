@@ -31,7 +31,7 @@
         {
             "package": "sirprize/scrubble",
             "version": "dev-master",
-            "source-reference": "v0.2.0"
+            "source-reference": "104b3b8c06c071997ccc53207c9c8450e5dc42dd"
         },
         {
             "package": "sirprize/themed",
