@@ -26,12 +26,12 @@
         {
             "package": "sirprize/scribble",
             "version": "dev-master",
-            "source-reference": "87b988b56b7a88151becb8599143ed15b79484af"
+            "source-reference": "0c8580fdc162b75d5a3610bd7f10966b30b140e9"
         },
         {
             "package": "sirprize/scrubble",
             "version": "dev-master",
-            "source-reference": "c49a275d3f816f57a4d7ed55cc90f112dfa8db2e"
+            "source-reference": "6ee0b5998abccf8c1259aab7cc56c2c36d23dfce"
         },
         {
             "package": "sirprize/themed",
@@ -41,14 +41,14 @@
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "eb82542e8ec9506096caf7c528564c740a214f56"
+            "source-reference": "eb82542e8ec9506096caf7c528564c740a214f56",
+            "alias-pretty-version": "2.1.x-dev",
+            "alias-version": "2.1.9999999.9999999-dev"
         },
         {
             "package": "symfony/event-dispatcher",
             "version": "dev-master",
-            "source-reference": "eb82542e8ec9506096caf7c528564c740a214f56",
-            "alias-pretty-version": "2.1.x-dev",
-            "alias-version": "2.1.9999999.9999999-dev"
+            "source-reference": "eb82542e8ec9506096caf7c528564c740a214f56"
         },
         {
             "package": "symfony/http-foundation",
