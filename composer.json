@@ -1,7 +1,7 @@
 {
     "name": "sirprize/scribbled",
     "type": "library",
-    "description": "Noteblog for scribblers and coders",
+    "description": "The noteblog for scribblers",
     "keywords": ["markdown", "textile", "html5", "responsive", "mobile", "symfony"],
     "homepage": "http://scribbled.io",
     "license": "MIT",
