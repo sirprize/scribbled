@@ -2,6 +2,42 @@
 
 $basePath = (dirname($_SERVER["SCRIPT_NAME"]) == '/') ? '' : dirname($_SERVER["SCRIPT_NAME"]);
 
+$markdown = array(
+    'inputFilters' => array(
+        'Sirprize\Scribble\File\Format\Markdown\InputFilter\CodeSnippetFilter' => array()
+    ),
+    'outputFilters' => array(
+        'Sirprize\Scribble\File\Format\Markdown\OutputFilter\HtmlConverterFilter' => array(),
+        'Sirprize\Scribble\File\Format\Markdown\OutputFilter\CodeblockLanguageHintFilter' => array()
+    )
+);
+
+$textile = array(
+    'inputFilters' => array(
+        'Sirprize\Scribble\File\Format\Textile\InputFilter\CodeSnippetFilter' => array()
+    ),
+    'outputFilters' => array(
+        'Sirprize\Scribble\File\Format\Textile\OutputFilter\HtmlConverterFilter' => array(),
+        'Sirprize\Scribble\File\Format\Textile\OutputFilter\CodeblockBlankLineFixerFilter' => array(),
+        'Sirprize\Scribble\File\Format\Textile\OutputFilter\CodeblockLanguageHintFilter' => array()
+    )
+);
+
+$plaintext = array(
+    'inputFilters' => array(
+        'Sirprize\Scribble\File\InputFilter\SnippetFilter' => array()
+    ),
+    'outputFilters' => array(
+        'Sirprize\Scribble\File\Format\Plaintext\OutputFilter\HtmlConverterFilter' => array()
+    )
+);
+
+$html = array(
+    'inputFilters' => array(
+        'Sirprize\Scribble\File\InputFilter\SnippetFilter' => array()
+    )
+);
+
 // config (production)
 $production = array(
     'php' => array(
@@ -13,7 +49,7 @@ $production = array(
         'debug' => 0,
         'templateDir' => dirname(__DIR__).'/vendor/sirprize/themed/templates',
         'mediaPath' => $basePath.'/vendor/sirprize/themed/media',
-        'headerGraphic' => $basePath.'/vendor/sirprize/themed/media/images/header.gif',
+        'headerAboutText' => 'Hi!',
         'dateFormat' => 'F d, Y',
         'scribbleImage' => '',
         'siteTitle' => "Scribbled - The Noteblog For Scribblers",
@@ -23,50 +59,34 @@ $production = array(
     ),
     'scribble.directory' => array(
         'dir' => dirname(__DIR__).'/scribble',
-        'path' => $basePath.'/scribble',
+        'path' => '/scribble',
         'files' => array(
-            'scribble.md' => array(
-                'inputFilters' => array(
-                    'Sirprize\Scribble\File\Format\Markdown\InputFilter\CodeSnippetFilter' => array()
-                ),
-                'outputFilters' => array(
-                    'Sirprize\Scribble\File\Format\Markdown\OutputFilter\HtmlConverterFilter' => array(),
-                    'Sirprize\Scribble\File\Format\Markdown\OutputFilter\CodeblockLanguageHintFilter' => array()
-                )
-            ),
-            'scribble.textile' => array(
-                'inputFilters' => array(
-                    'Sirprize\Scribble\File\Format\Textile\InputFilter\CodeSnippetFilter' => array()
-                ),
-                'outputFilters' => array(
-                    'Sirprize\Scribble\File\Format\Textile\OutputFilter\HtmlConverterFilter' => array(),
-                    'Sirprize\Scribble\File\Format\Textile\OutputFilter\CodeblockBlankLineFixerFilter' => array(),
-                    'Sirprize\Scribble\File\Format\Textile\OutputFilter\CodeblockLanguageHintFilter' => array()
-                )
-            ),
-            'scribble.txt' => array(
-                'inputFilters' => array(
-                    'Sirprize\Scribble\File\InputFilter\SnippetFilter' => array()
-                ),
-                'outputFilters' => array(
-                    'Sirprize\Scribble\File\Format\Plaintext\OutputFilter\HtmlConverterFilter' => array()
-                )
-            ),
-            'scribble.html' => array(
-                'inputFilters' => array(
-                    'Sirprize\Scribble\File\InputFilter\SnippetFilter' => array()
-                )
-            )
+            'scribble.md' => $markdown,
+            'scribble.textile' => $textile,
+            'scribble.txt' => $plaintext,
+            'scribble.html' => $html
         )
     ),
     'scribble.repository' => array(
         'mode' => 'published', // show published scribbles only
         'itemsPerPage' => 20
     ),
+    'page.directory' => array(
+        'dir' => dirname(__DIR__).'/page',
+        'suffices' => array(
+            'md' => $markdown,
+            'textile' => $textile,
+            'txt' => $plaintext,
+            'html' => $html
+        )
+    ),
+    'page.repository' => array(
+        'mode' => 'published' // show published scribbles only
+    ),
     'requires' => array(
         dirname(__DIR__).'/vendor/autoload.php',
-        dirname(__DIR__).'/vendor-unmanaged/michelf/php-markdown/markdown.php',
-        dirname(__DIR__).'/vendor-unmanaged/netcarver/textile/classTextile.php'
+        dirname(__DIR__).'/vendor-uncomposed/michelf/php-markdown/markdown.php',
+        dirname(__DIR__).'/vendor-uncomposed/netcarver/textile/classTextile.php'
     ),
     'namespaces' => array(),
     'google' => array(
@@ -97,7 +117,7 @@ $development = array(
 
 // detect environment and prepare config
 $config
-    = (preg_match('/(loc|localhost)(:\d+)?$/', $_SERVER['HTTP_HOST']))
+    = (preg_match('/(localhost)(:\d+)?$/', $_SERVER['HTTP_HOST']))
     ? array_replace_recursive($production, $development)
     : $production
 ;

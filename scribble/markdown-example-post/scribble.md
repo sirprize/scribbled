@@ -1,6 +1,6 @@
-<!-- scribble-title: Markdown Style Tester -->
+<!-- scribble-title: Markdown Example Post -->
 <!-- scribble-lede: A summary of Markdown elements for CSS testing -->
-<!-- scribble-tags: markdown -->
+<!-- scribble-tags: markdown css -->
 <!-- scribble-created: 20120505 -->
 <!-- scribble-modified: 20120505 -->
 <!-- scribble-publish: 1 -->
@@ -166,6 +166,4 @@ Use the `printf()` function.
 
 ## Images
 
-![Alt text](/scribbled/media/images/scribbled.png)
-
-![Alt text](/scribbled/media/images/scribbled.png "Optional title")
+![Alt text](images/scribbled.png)

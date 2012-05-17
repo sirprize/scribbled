@@ -1,0 +1,23 @@
+<?php
+    $theme = $services->get('theme');
+    $urler = $services->get('urler');
+    $request = $services->get('request');
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title><?php echo $scribble->getTitle(); ?> (Demo)</title>
+
+        <script>
+            <?php echo $view->render('snippets/snippet.js'); ?>
+        </script>
+    </head>
+
+    <body>
+        <div class="back-to-scribble">
+            Back to <a href="<?php echo $urler->generate('frontendScribbleDetail', array('slug' => $scribble->getSlug())); ?>"><?php echo $scribble->getTitle(); ?></a><hr />
+        </div>
+    </body>
+</html>

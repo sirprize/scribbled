@@ -1,0 +1,81 @@
+<!-- scribble-title: Textile Example Post -->
+<!-- scribble-lede: A summary of Textile elements for CSS testing -->
+<!-- scribble-tags: textile css -->
+<!-- scribble-created: 20120505 -->
+<!-- scribble-modified: 20120505 -->
+<!-- scribble-publish: 1 -->
+
+h1. This is an H1
+
+h2. This is an H2
+
+h3. This is an H3
+
+h4. This is an H4
+
+h5. This is an H5
+
+h6. This is an H6
+
+
+h2. Blockquote
+
+bq. This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
+
+h2. Unordered List
+
+* Red
+* Green
+* Blue
+
+h2. Ordered List
+
+# Bird
+# McHale
+# Parish
+
+h2. Code block
+
+bc. <div class="footer">
+    &copy; 2004 Foo Corporation
+</div>
+
+h2. Code
+
+Use the @printf()@ function.
+
+h2. Inline Links
+
+"This is a link":http://example.com/
+
+###. inline links with title attribute are not supported
+###. "This is a link (This is a title) ":http://example.com/
+
+h2. Reference Links
+
+[id]http://example.com/ 
+
+This is a "an example":id reference-style link.
+
+h2. Emphasis
+
+*bold text*
+
+_italic text_
+
+*_bold italic text_*
+
+-strikethrough text-
+
+*-bold strikethrough text-*
+
+*_-bold italic strikethrough text-_*
+
+h2. Tables
+
+|Table | with two columns |
+|and two | rows |
+
+h2. Images
+
+!images/scribbled.png!
